@@ -1,4 +1,4 @@
-package md.mirrerror.aigeneratedtweetstokafkaservice.config;
+package md.mirrerror.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -15,6 +15,7 @@
     <description>microservices-course</description>
     <modules>
         <module>ai-generated-tweets-to-kafka-service</module>
+        <module>app-config-data</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -30,6 +31,11 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>md.mirrerror</groupId>
+                <artifactId>app-config-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>

@@ -1,10 +1,10 @@
 package md.mirrerror.aigeneratedtweetstokafkaservice.service.springai;
 
 import lombok.extern.slf4j.Slf4j;
-import md.mirrerror.aigeneratedtweetstokafkaservice.config.AiGeneratedTweetsToKafkaServiceConfigData;
 import md.mirrerror.aigeneratedtweetstokafkaservice.exception.AiGeneratedTweetsToKafkaException;
 import md.mirrerror.aigeneratedtweetstokafkaservice.service.AiService;
 import md.mirrerror.aigeneratedtweetstokafkaservice.service.springai.model.TweetResponse;
+import md.mirrerror.config.AiGeneratedTweetsToKafkaServiceConfigData;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;

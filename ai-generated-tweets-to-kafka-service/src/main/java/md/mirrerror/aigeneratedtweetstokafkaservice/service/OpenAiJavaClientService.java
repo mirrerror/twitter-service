@@ -7,8 +7,8 @@ import com.openai.models.chat.completions.ChatCompletion;
 import com.openai.models.chat.completions.ChatCompletionCreateParams;
 import com.openai.models.chat.completions.ChatCompletionMessage;
 import lombok.extern.slf4j.Slf4j;
-import md.mirrerror.aigeneratedtweetstokafkaservice.config.AiGeneratedTweetsToKafkaServiceConfigData;
 import md.mirrerror.aigeneratedtweetstokafkaservice.exception.AiGeneratedTweetsToKafkaException;
+import md.mirrerror.config.AiGeneratedTweetsToKafkaServiceConfigData;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 

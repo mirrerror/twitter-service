@@ -28,8 +28,14 @@
         </dependency>
 
         <dependency>
+            <groupId>md.mirrerror</groupId>
+            <artifactId>app-config-data</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

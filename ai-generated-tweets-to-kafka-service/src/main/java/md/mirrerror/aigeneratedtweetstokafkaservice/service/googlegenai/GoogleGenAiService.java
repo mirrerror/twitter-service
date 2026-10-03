@@ -4,9 +4,9 @@ import com.google.genai.Client;
 import com.google.genai.types.GenerateContentConfig;
 import com.google.genai.types.GenerateContentResponse;
 import lombok.extern.slf4j.Slf4j;
-import md.mirrerror.aigeneratedtweetstokafkaservice.config.AiGeneratedTweetsToKafkaServiceConfigData;
 import md.mirrerror.aigeneratedtweetstokafkaservice.exception.AiGeneratedTweetsToKafkaException;
 import md.mirrerror.aigeneratedtweetstokafkaservice.service.AiService;
+import md.mirrerror.config.AiGeneratedTweetsToKafkaServiceConfigData;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
