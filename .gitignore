@@ -2,6 +2,7 @@ ai-generated-tweets-to-kafka-service/ai-generated-tweets-to-kafka-service
 ai-generated-tweets-to-kafka-service/logs
 
 docker-compose/.env
+docker-compose/docker-logs
 
 HELP.md
 target/

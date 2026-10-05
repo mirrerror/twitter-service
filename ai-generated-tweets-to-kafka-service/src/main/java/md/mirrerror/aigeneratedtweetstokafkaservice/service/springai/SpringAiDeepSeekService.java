@@ -24,6 +24,7 @@ import java.util.Map;
 public class SpringAiDeepSeekService implements AiService {
 
     public static final String DEEP_SEEK_THINK_REGEX = "(?s)<think>.*?</think>";
+    public static final String MARKDOWN_FENCE_REGEX = "(?s)^```(?:json)?\\s*|\\s*```$";
 
     private final ChatClient chatClient;
     private final AiGeneratedTweetsToKafkaServiceConfigData configData;
@@ -43,7 +44,7 @@ public class SpringAiDeepSeekService implements AiService {
 
         BeanOutputConverter<TweetResponse> converter = new BeanOutputConverter<>(TweetResponse.class);
 
-        log.info("Converter format: {}", converter.getFormat());
+        log.debug("Converter format: {}", converter.getFormat());
 
         PromptTemplate promptTemplate = new PromptTemplate(tweetPrompt);
         Prompt prompt = promptTemplate.create(Map.of(
@@ -68,7 +69,11 @@ public class SpringAiDeepSeekService implements AiService {
         log.info("Model result: {} with model {}", modelResult,
                 chatClientResponse.chatResponse().getMetadata().getModel());
 
-        return modelResult.replaceAll(DEEP_SEEK_THINK_REGEX, "").trim();
+        return modelResult
+                .replaceAll(DEEP_SEEK_THINK_REGEX, "")
+                .trim()
+                .replaceAll(MARKDOWN_FENCE_REGEX, "")
+                .trim();
     }
 
 }
