@@ -1,6 +1,8 @@
 ai-generated-tweets-to-kafka-service/ai-generated-tweets-to-kafka-service
 ai-generated-tweets-to-kafka-service/logs
 
+docker-compose/.env
+
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
