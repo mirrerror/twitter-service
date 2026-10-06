@@ -1,5 +1,6 @@
 ai-generated-tweets-to-kafka-service/ai-generated-tweets-to-kafka-service
 ai-generated-tweets-to-kafka-service/logs
+config-server/logs
 
 docker-compose/.env
 docker-compose/docker-logs

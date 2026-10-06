@@ -21,6 +21,7 @@
         <module>kafka/kafka-admin</module>
         <module>kafka/kafka-producer</module>
         <module>common-config</module>
+        <module>config-server</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -38,6 +39,8 @@
         <kafkaAvroSerializer.version>8.3.2</kafkaAvroSerializer.version>
         <springKafka.version>4.2.0-M2</springKafka.version>
         <springRetry.version>2.0.13</springRetry.version>
+        <springCloud.version>5.1.0-M1</springCloud.version>
+        <springCloudDependencies.version>2025.1.2</springCloudDependencies.version>
     </properties>
 
     <repositories>
@@ -58,6 +61,28 @@
                 <groupId>md.mirrerror</groupId>
                 <artifactId>common-config</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-server</artifactId>
+                <version>${springCloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
+                <version>${springCloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${springCloudDependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>md.mirrerror</groupId>
