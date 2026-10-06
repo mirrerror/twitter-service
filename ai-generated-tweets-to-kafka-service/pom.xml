@@ -89,6 +89,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
+                        <builder>paketobuildpacks/builder-jammy-base</builder>
                         <name>${project.groupId}/ai-generated-tweets-to-kafka-service:${project.version}</name>
                     </image>
                 </configuration>
