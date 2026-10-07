@@ -27,6 +27,7 @@
         <module>elastic</module>
         <module>common-util</module>
         <module>elastic-query-service</module>
+        <module>elastic-query-web-client</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -48,6 +49,8 @@
         <springCloudDependencies.version>2025.1.2</springCloudDependencies.version>
         <elasticSearch.version>9.5.4</elasticSearch.version>
         <springdocOpenapiUi.version>1.8.0</springdocOpenapiUi.version>
+        <thymeleafExtrasSpringsecurity6.version>3.1.5.RELEASE</thymeleafExtrasSpringsecurity6.version>
+        <springCloudLoadBalancer.version>5.1.0-M1</springCloudLoadBalancer.version>
     </properties>
 
     <repositories>
@@ -103,6 +106,16 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdocOpenapiUi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.thymeleaf.extras</groupId>
+                <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+                <version>${thymeleafExtrasSpringsecurity6.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -171,6 +184,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-webflux</artifactId>
                 <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-loadbalancer</artifactId>
+                <version>${springCloudLoadBalancer.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>

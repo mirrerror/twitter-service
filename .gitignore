@@ -1,6 +1,8 @@
 ai-generated-tweets-to-kafka-service/ai-generated-tweets-to-kafka-service
 ai-generated-tweets-to-kafka-service/logs
 config-server/logs
+elastic-query-web-client/logs
+elastic-query-service/logs
 
 docker-compose/.env
 docker-compose/docker-logs

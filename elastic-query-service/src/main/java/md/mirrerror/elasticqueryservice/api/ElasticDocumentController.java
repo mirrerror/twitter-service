@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import md.mirrerror.elasticqueryservice.business.ElasticQueryService;
 import md.mirrerror.elasticqueryservice.model.ElasticQueryServiceRequestModel;
 import md.mirrerror.elasticqueryservice.model.ElasticQueryServiceResponseModel;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +23,9 @@ import java.util.List;
 public class ElasticDocumentController {
 
     private final ElasticQueryService elasticQueryService;
+
+    @Value("${server.port}")
+    private String port;
 
     public ElasticDocumentController(ElasticQueryService elasticQueryService) {
         this.elasticQueryService = elasticQueryService;
@@ -38,7 +42,7 @@ public class ElasticDocumentController {
     @GetMapping("/")
     public ResponseEntity<List<ElasticQueryServiceResponseModel>> getAllDocuments() {
         List<ElasticQueryServiceResponseModel> response = elasticQueryService.getAllDocuments();
-        log.info("Elasticsearch returned {} documents", response.size());
+        log.info("Elasticsearch returned {} documents on port {}", response.size(), port);
         return ResponseEntity.ok(response);
     }
 
@@ -55,7 +59,7 @@ public class ElasticDocumentController {
             @PathVariable @NotEmpty String id
     ) {
         ElasticQueryServiceResponseModel response = elasticQueryService.getDocumentById(id);
-        log.info("Elasticsearch returned document with id: {}", id);
+        log.info("Elasticsearch returned document with id: {} on port {}", id, port);
         return ResponseEntity.ok(response);
     }
 
@@ -72,7 +76,7 @@ public class ElasticDocumentController {
             @RequestBody @Valid ElasticQueryServiceRequestModel request
     ) {
         List<ElasticQueryServiceResponseModel> response = elasticQueryService.getDocumentsByText(request.getText());
-        log.info("Elasticsearch returned {} documents", response.size());
+        log.info("Elasticsearch returned {} documents on port {}", response.size(), port);
         return ResponseEntity.ok(response);
     }
 
