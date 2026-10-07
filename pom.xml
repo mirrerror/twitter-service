@@ -25,6 +25,8 @@
         <module>kafka/kafka-consumer</module>
         <module>kafka-to-elastic-service</module>
         <module>elastic</module>
+        <module>common-util</module>
+        <module>elastic-query-service</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -45,6 +47,7 @@
         <springCloud.version>5.1.0-M1</springCloud.version>
         <springCloudDependencies.version>2025.1.2</springCloudDependencies.version>
         <elasticSearch.version>9.5.4</elasticSearch.version>
+        <springdocOpenapiUi.version>1.8.0</springdocOpenapiUi.version>
     </properties>
 
     <repositories>
@@ -56,6 +59,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>md.mirrerror</groupId>
+                <artifactId>common-util</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>md.mirrerror</groupId>
                 <artifactId>app-config-data</artifactId>
@@ -80,6 +88,21 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
                 <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
+                <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-hateoas</artifactId>
+                <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdocOpenapiUi.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -121,6 +144,11 @@
             <dependency>
                 <groupId>md.mirrerror</groupId>
                 <artifactId>elastic-index-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>md.mirrerror</groupId>
+                <artifactId>elastic-query-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

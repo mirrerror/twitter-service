@@ -11,7 +11,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.time.Duration;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "md.mirrerror.elastic.index.client.repository")
+@EnableElasticsearchRepositories(basePackages = "md.mirrerror.elastic")
 public class ElasticSearchConfig extends ElasticsearchConfiguration {
 
     private final ElasticConfigData elasticConfigData;
