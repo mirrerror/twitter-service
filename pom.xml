@@ -22,6 +22,9 @@
         <module>kafka/kafka-producer</module>
         <module>common-config</module>
         <module>config-server</module>
+        <module>kafka/kafka-consumer</module>
+        <module>kafka-to-elastic-service</module>
+        <module>elastic</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -41,6 +44,7 @@
         <springRetry.version>2.0.13</springRetry.version>
         <springCloud.version>5.1.0-M1</springCloud.version>
         <springCloudDependencies.version>2025.1.2</springCloudDependencies.version>
+        <elasticSearch.version>9.5.4</elasticSearch.version>
     </properties>
 
     <repositories>
@@ -100,6 +104,26 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>md.mirrerror</groupId>
+                <artifactId>kafka-consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>md.mirrerror</groupId>
+                <artifactId>elastic-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>md.mirrerror</groupId>
+                <artifactId>elastic-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>md.mirrerror</groupId>
+                <artifactId>elastic-index-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
@@ -118,6 +142,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-webflux</artifactId>
+                <version>${springBoot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-data-elasticsearch</artifactId>
                 <version>${springBoot.version}</version>
             </dependency>
             <dependency>
@@ -156,6 +185,11 @@
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro</artifactId>
                 <version>${avro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticSearch.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.confluent</groupId>

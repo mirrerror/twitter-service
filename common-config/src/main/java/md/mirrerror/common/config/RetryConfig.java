@@ -3,9 +3,10 @@ package md.mirrerror.common.config;
 import md.mirrerror.config.RetryConfigData;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.retry.backoff.ExponentialBackOffPolicy;
-import org.springframework.retry.policy.SimpleRetryPolicy;
-import org.springframework.retry.support.RetryTemplate;
+import org.springframework.core.retry.RetryPolicy;
+import org.springframework.core.retry.RetryTemplate;
+
+import java.time.Duration;
 
 @Configuration
 public class RetryConfig {
@@ -18,21 +19,15 @@ public class RetryConfig {
 
     @Bean
     public RetryTemplate kafkaRetryTemplate() {
-        RetryTemplate retryTemplate = new RetryTemplate();
+        RetryPolicy retryPolicy = RetryPolicy.builder()
+                // maxRetries excludes the initial attempt, maxAttempts includes it
+                .maxRetries(retryConfigData.getMaxAttempts() - 1)
+                .delay(Duration.ofMillis(retryConfigData.getInitialIntervalMs()))
+                .maxDelay(Duration.ofMillis(retryConfigData.getMaxIntervalMs()))
+                .multiplier(retryConfigData.getMultiplier())
+                .build();
 
-        ExponentialBackOffPolicy backOffPolicy = new ExponentialBackOffPolicy();
-        backOffPolicy.setInitialInterval(retryConfigData.getInitialIntervalMs());
-        backOffPolicy.setMaxInterval(retryConfigData.getMaxIntervalMs());
-        backOffPolicy.setMultiplier(retryConfigData.getMultiplier());
-
-        retryTemplate.setBackOffPolicy(backOffPolicy);
-
-        SimpleRetryPolicy simpleRetryPolicy = new SimpleRetryPolicy();
-        simpleRetryPolicy.setMaxAttempts(retryConfigData.getMaxAttempts());
-
-        retryTemplate.setRetryPolicy(simpleRetryPolicy);
-
-        return retryTemplate;
+        return new RetryTemplate(retryPolicy);
     }
 
 }

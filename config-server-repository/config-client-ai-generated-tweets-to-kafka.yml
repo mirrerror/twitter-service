@@ -1,3 +1,6 @@
+server:
+  port: 8181
+
 ai-generated-tweets-to-kafka-service:
   streaming-data-keywords:
     - Java

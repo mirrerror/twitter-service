@@ -36,6 +36,7 @@ public class AiGeneratedTweetsToKafkaServiceApplication implements CommandLineRu
     }
 
     public static void main(String[] args) {
+        System.setProperty("org.apache.avro.SERIALIZABLE_PACKAGES", "md.mirrerror.kafka.avro.model");
         SpringApplication.run(AiGeneratedTweetsToKafkaServiceApplication.class, args);
     }
 
