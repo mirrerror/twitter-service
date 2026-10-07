@@ -1,7 +1,6 @@
 package md.mirrerror.elasticqueryservice.business;
 
-import md.mirrerror.elasticqueryservice.model.ElasticQueryServiceRequestModel;
-import md.mirrerror.elasticqueryservice.model.ElasticQueryServiceResponseModel;
+import md.mirrerror.elasticqueryservice.common.model.ElasticQueryServiceResponseModel;
 
 import java.util.List;
 

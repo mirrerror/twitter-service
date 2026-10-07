@@ -2,8 +2,8 @@ package md.mirrerror.elasticquerywebclient.api;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import md.mirrerror.elasticquerywebclient.model.ElasticQueryWebClientRequestModel;
-import md.mirrerror.elasticquerywebclient.model.ElasticQueryWebClientResponseModel;
+import md.mirrerror.elasticquerywebclient.common.model.ElasticQueryWebClientRequestModel;
+import md.mirrerror.elasticquerywebclient.common.model.ElasticQueryWebClientResponseModel;
 import md.mirrerror.elasticquerywebclient.service.ElasticQueryWebClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

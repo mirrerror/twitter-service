@@ -1,4 +1,4 @@
-package md.mirrerror.elasticqueryservice.model;
+package md.mirrerror.elasticquerywebclient.common.model;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ElasticQueryServiceRequestModel {
+public class ElasticQueryWebClientRequestModel {
 
     private String id;
 

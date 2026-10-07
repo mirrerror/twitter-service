@@ -12,6 +12,10 @@
     <dependencies>
         <dependency>
             <groupId>md.mirrerror</groupId>
+            <artifactId>elastic-query-service-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>md.mirrerror</groupId>
             <artifactId>app-config-data</artifactId>
         </dependency>
         <dependency>

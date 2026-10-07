@@ -2,9 +2,9 @@ package md.mirrerror.elasticquerywebclient.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import md.mirrerror.config.ElasticQueryWebClientConfigData;
-import md.mirrerror.elasticquerywebclient.exception.ElasticQueryWebClientException;
-import md.mirrerror.elasticquerywebclient.model.ElasticQueryWebClientRequestModel;
-import md.mirrerror.elasticquerywebclient.model.ElasticQueryWebClientResponseModel;
+import md.mirrerror.elasticquerywebclient.common.exception.ElasticQueryWebClientException;
+import md.mirrerror.elasticquerywebclient.common.model.ElasticQueryWebClientRequestModel;
+import md.mirrerror.elasticquerywebclient.common.model.ElasticQueryWebClientResponseModel;
 import md.mirrerror.elasticquerywebclient.service.ElasticQueryWebClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;

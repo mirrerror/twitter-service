@@ -1,20 +1,21 @@
-package md.mirrerror.elasticquerywebclient.model;
+package md.mirrerror.elasticquerywebclient.common.model;
 
-import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ElasticQueryWebClientRequestModel {
+public class ElasticQueryWebClientResponseModel {
 
     private String id;
-
-    @NotEmpty
+    private Long userId;
     private String text;
+    private LocalDateTime createdAt;
 
 }

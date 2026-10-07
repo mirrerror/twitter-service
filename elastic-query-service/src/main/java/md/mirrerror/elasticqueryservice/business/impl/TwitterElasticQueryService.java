@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import md.mirrerror.elastic.query.client.service.ElasticQueryClient;
 import md.mirrerror.elasticmodel.index.impl.TwitterIndexModel;
 import md.mirrerror.elasticqueryservice.business.ElasticQueryService;
-import md.mirrerror.elasticqueryservice.model.ElasticQueryServiceResponseModel;
+import md.mirrerror.elasticqueryservice.common.model.ElasticQueryServiceResponseModel;
 import md.mirrerror.elasticqueryservice.model.assembler.ElasticQueryServiceResponseModelAssembler;
 import org.springframework.stereotype.Service;
 

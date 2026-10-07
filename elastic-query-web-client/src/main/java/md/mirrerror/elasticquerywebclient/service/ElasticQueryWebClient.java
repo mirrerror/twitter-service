@@ -1,7 +1,7 @@
 package md.mirrerror.elasticquerywebclient.service;
 
-import md.mirrerror.elasticquerywebclient.model.ElasticQueryWebClientRequestModel;
-import md.mirrerror.elasticquerywebclient.model.ElasticQueryWebClientResponseModel;
+import md.mirrerror.elasticquerywebclient.common.model.ElasticQueryWebClientRequestModel;
+import md.mirrerror.elasticquerywebclient.common.model.ElasticQueryWebClientResponseModel;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package md.mirrerror.elasticqueryservice.error.handler;
+package md.mirrerror.elasticqueryservice.common.api.error.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

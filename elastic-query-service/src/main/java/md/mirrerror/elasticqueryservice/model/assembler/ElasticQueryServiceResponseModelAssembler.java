@@ -2,8 +2,8 @@ package md.mirrerror.elasticqueryservice.model.assembler;
 
 import md.mirrerror.elasticmodel.index.impl.TwitterIndexModel;
 import md.mirrerror.elasticqueryservice.api.ElasticDocumentController;
-import md.mirrerror.elasticqueryservice.model.ElasticQueryServiceResponseModel;
-import md.mirrerror.elasticqueryservice.transformer.ElasticToResponseModelTransformer;
+import md.mirrerror.elasticqueryservice.common.model.ElasticQueryServiceResponseModel;
+import md.mirrerror.elasticqueryservice.common.transformer.ElasticToResponseModelTransformer;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
 

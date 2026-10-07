@@ -1,4 +1,4 @@
-package md.mirrerror.elasticquerywebclient.exception;
+package md.mirrerror.elasticquerywebclient.common.exception;
 
 public class ElasticQueryWebClientException extends RuntimeException {
 

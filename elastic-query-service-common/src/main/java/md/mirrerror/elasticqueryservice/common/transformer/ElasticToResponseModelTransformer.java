@@ -1,7 +1,7 @@
-package md.mirrerror.elasticqueryservice.transformer;
+package md.mirrerror.elasticqueryservice.common.transformer;
 
 import md.mirrerror.elasticmodel.index.impl.TwitterIndexModel;
-import md.mirrerror.elasticqueryservice.model.ElasticQueryServiceResponseModel;
+import md.mirrerror.elasticqueryservice.common.model.ElasticQueryServiceResponseModel;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

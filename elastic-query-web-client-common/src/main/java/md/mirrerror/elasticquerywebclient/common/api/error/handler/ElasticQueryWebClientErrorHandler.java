@@ -1,7 +1,7 @@
-package md.mirrerror.elasticquerywebclient.api.error.handler;
+package md.mirrerror.elasticquerywebclient.common.api.error.handler;
 
 import lombok.extern.slf4j.Slf4j;
-import md.mirrerror.elasticquerywebclient.model.ElasticQueryWebClientRequestModel;
+import md.mirrerror.elasticquerywebclient.common.model.ElasticQueryWebClientRequestModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.ui.Model;

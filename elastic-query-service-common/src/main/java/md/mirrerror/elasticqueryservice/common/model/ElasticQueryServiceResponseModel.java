@@ -1,4 +1,4 @@
-package md.mirrerror.elasticqueryservice.model;
+package md.mirrerror.elasticqueryservice.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
